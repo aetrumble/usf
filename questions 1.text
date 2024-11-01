@@ -1,0 +1,42 @@
+Question 1 🤔​
+Based on the story of Julius Caesar's secret party and the Caesar Cipher, identify potential variables you would need. Please ensure you use appropriate variable naming conventions in JavaScript.
+
+Answer 🔑​
+partyLocation
+shiftValue
+encryptedMessage
+decryptedMessage
+isPartySafe
+
+Question 2 🤔​
+After identifying the variables from the story, specify their primitive data types in JavaScript. Also, provide these variables with some initial values.
+
+Answer 🔑​
+let partyLocation = "GARDEN"; = String
+const shiftValue = 3; = number
+let encryptedMessage = ""; = string
+let decryptedMessage = ""; = string
+let isPartySafe = false; = Boolean
+
+​
+Question 3 🤔​
+From the variables you've identified, determine which ones should be declared using const and which ones should use let.
+
+Answer 🔑​
+let partyLocation = "GARDEN"; hold the message that will be encrypted/decrypted.
+const shiftValue = 3; the shiftvalue will change the letters from one letter to another by shifting it 3 times to change it to somethingelse.
+let encryptedMessage = ""; the encrupted message will change a normal sentense to a weird text from.
+let decryptedMessage = ""; the decripted message will change the weird text back to a normal sentense.
+let isPartySafe = false;  the party is not safe.
+
+Question 4 🤔
+Given the variable `shiftValue`, write a piece of code to check if its value is an integer.
+
+Answer 🔑
+const shiftValue = 3;
+Number.isInteger(shiftValue);
+The integer will comeback as true.
+
+const shiftValue = 3.14; or const shiftValue = '3';
+Number.isInteger(shiftValue);
+the integer will comeback as false.
