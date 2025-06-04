@@ -1,0 +1,35 @@
+let doForm = document.getElementById("doForm");
+let toList = document.getElementById("toList");
+
+  doForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let cmpltButton = document.createElement("button");
+    cmpltButton.innerText = "Done";
+
+    let rmvButton = document.createElement("button");
+    rmvButton.innerText = "Delete";
+
+    let newTodo = document.createElement("li");
+
+    let newTodoName = document.createElement("span");
+
+    newTodoName.innerText = document.getElementById("task").value;
+
+    newTodo.appendChild(newTodoName);
+    newTodo.appendChild(cmpltButton);
+    newTodo.appendChild(rmvButton);
+
+    toList.appendChild(newTodo);
+
+    cmpltButton.addEventListener("click", function(e) {
+        newTodo.innerHTML = newTodoName.innerText.strike();
+        newTodo.appendChild(rmvButton);
+    })
+    
+    rmvButton.addEventListener("click", function(e) {
+        e.target.parentNode.remove();
+    })
+
+    doForm.reset();
+  });
